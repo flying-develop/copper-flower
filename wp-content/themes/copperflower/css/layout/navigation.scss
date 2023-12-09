@@ -1,0 +1,245 @@
+nav[role="navigation"] {
+	z-index: 99;
+	width: 100%;
+	position: fixed;
+	background: $light;
+	top: 0;
+	left: 0;
+	@media #{$lg-less} {
+		top: 48px;
+		bottom: 0;
+		overflow: auto;
+		position: fixed;
+		touch-action: pan-y;
+		overscroll-behavior: contain;
+		pointer-events: none;
+		opacity: 0;
+		transform: translate3d(0, -100%, 0);
+		transition: transform .4s, opacity .2s .2s;
+		@supports (overflow: overlay) {
+			overflow: overlay;
+		}
+		.menu-open &{
+			opacity: 1;
+			pointer-events: auto;
+			transform: translate3d(0,0,0);
+		}
+	}
+	@media #{$lg} {
+		.with-fancybox &{
+			width: auto;
+			right: 6px;
+			right: var(--fancybox-scrollbar-compensate);
+		}
+	}
+	#wpadminbar ~ &{
+		@media #{$lg} {
+			top: 32px;
+		}
+	}
+}
+.navigation-wrapper{
+	padding-top: 24px;
+	padding-bottom: 24px;
+	@media #{$lg-less} {
+		transform: translate3d(0,0,0);
+		backface-visibility: hidden;
+	}
+	@media #{$md} {
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+	@media #{$lg} {
+		display: flex;
+		justify-content: space-between;
+		height: 112px;
+		align-items: center;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	ul.main-menu{
+		margin: 0;
+		padding: 0;
+		font-size: 14px;
+		line-height: 1.4;
+		@media #{$lg} {
+			display: inline-flex;
+			padding-left: 102px;
+			position: relative;
+			top: 26px;
+		}
+		@media #{$lg} {
+			@media screen and (max-width: 1299px) {
+				flex-wrap: wrap;
+				top: 0;
+				justify-content: flex-start;
+				padding-left: 94px;
+				align-self: flex-end;
+				padding-bottom: 20px;
+				li.menu-item{
+					margin: 4px 8px;
+					& + li{
+						margin: 4px 8px;
+					}
+				}
+			}
+		}
+		@media #{$xxl} {
+			font-size: 15px;
+			top: 23px;
+		}
+		li{
+			padding: 0;
+			@media #{$lg} {
+				white-space: nowrap;
+			}
+			&:before{
+				display: none;
+			}
+			& + li{
+				margin-top: 16px;
+				@media #{$lg} {
+					margin-top: 0;
+					margin-left: 16px;
+				}
+				@media #{$xl} {
+					margin-left: 24px;
+				}
+				@media #{$xxl} {
+					margin-left: 32px;
+				}
+			}
+			a{
+				display: inline-block;
+				font-family: 'PT Sans Caption', sans-serif;
+				text-transform: uppercase;
+				color: $text;
+				transition: color 0.3s;
+				.no-touch &:hover{
+					color: $orange;
+				}
+			}
+			&.current-menu-item{
+				a{
+					color: $orange;
+				}
+			}
+		}
+	}
+	.become-btn{
+		margin: 24px 0 0 0;
+		@media #{$lg} {
+			display: none;
+		}
+		.btn{
+			padding: 11px;
+		}
+	}
+	.partners{
+		padding-top: 32px;
+		margin-left: -4px;
+		margin-right: -4px;
+		font-size: 0;
+		line-height: 1;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		@media #{$lg} {
+			flex-wrap: nowrap;
+			margin-right: 0;
+			padding-top: 8px;
+			flex: 0 0 420px;
+			margin-left: 32px;
+		}
+
+		/*@media #{$lg} {
+			@media screen and (max-width: 1199px) {
+				display: none;
+			}
+		}*/
+		/*@media #{$lg} {
+			display: flex;
+			align-items: center;
+			flex: 0 0 284px;
+		}
+		@media #{$xl} {
+			flex: 0 0 334px;
+		}
+		@media #{$xxl} {
+			flex: 0 0 373px;
+		}*/
+	}
+	.partner{
+		margin: 8px 4px 0 4px;
+		text-align: center;
+		flex: 0 0 auto;
+		img{
+			height: 64px;
+			width: auto;
+		}
+		@media #{$lg} {
+			flex-wrap: nowrap;
+			margin: 0;
+			& + .partner{
+				margin-left: 8px;
+			}
+		}
+		/*&-dost{
+			width: 126px;
+			@media #{$lg} {
+				flex: 0 0 102px;
+				width: 102px;
+			}
+			@media #{$xl} {
+				flex: 0 0 126px;
+				width: 126px;
+			}
+			@media #{$xxl} {
+				flex: 0 0 141px;
+				width: 141px;
+			}
+		}
+		&-pfki{
+			width: 194px;
+			@media #{$lg} {
+				flex: 0 0 170px;
+				width: 170px;
+			}
+			@media #{$xl} {
+				flex: 0 0 194px;
+				width: 194px;
+			}
+			@media #{$xxl} {
+				flex: 0 0 218px;
+				width: 218px;
+			}
+		}
+		& + .partner{
+			margin-top: 12px;
+			@media #{$lg} {
+				margin-top: 0;
+				margin-left: 12px;
+			}
+			@media #{$xl} {
+				margin-left: 14px;
+			}
+		}*/
+	}
+	a.partner{
+		transition: opacity 0.3s;
+		display: block;
+		.no-touch &:hover{
+			opacity: 0.5;
+		}
+	}
+}
+
+html.menu-open{
+	@media #{$lg-less} {
+		overflow: hidden!important;
+		body{
+			overflow: hidden!important;
+		}
+	}
+}

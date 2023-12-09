@@ -1,0 +1,17 @@
+@import "../blocks/front-slider";
+@import "../blocks/front-about";
+@import "../blocks/front-aim";
+@import "../blocks/front-news";
+@import "../blocks/front-facts";
+@import "../blocks/front-quotes";
+
+.layout-part-main{
+  padding-top: 48px;
+  @media screen and (min-width: 1024px) {
+    padding-top: 112px;
+  }
+}
+
+.front-top{
+  background: #F5F1EE;
+}

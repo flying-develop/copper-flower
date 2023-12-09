@@ -1,0 +1,28 @@
+$screen: "only screen";
+$mobile-end: 575px;
+$mobile-wide-start: $mobile-end + 1;
+$mobile-wide-end: 767px;
+$tablet-start: $mobile-wide-end + 1;
+$tablet-end: 1023px;
+$laptop-start: $tablet-end + 1;
+$laptop-end: 1199px;
+$laptop-wide-start: $laptop-end + 1;
+$laptop-wide-end: 1399px;
+$desktop-start: $laptop-wide-end + 1;
+
+$sm: "#{$screen} and (min-width: #{$mobile-wide-start})";
+$md: "#{$screen} and (min-width: #{$tablet-start})";
+$lg: "#{$screen} and (min-width: #{$laptop-start})";
+$xl: "#{$screen} and (min-width: #{$laptop-wide-start})";
+$xxl: "#{$screen} and (min-width: #{$desktop-start})";
+
+$sm-less: "#{$screen} and (max-width: #{$mobile-end})";
+$md-less: "#{$screen} and (max-width: #{$mobile-wide-end})";
+$lg-less: "#{$screen} and (max-width: #{$tablet-end})";
+$xl-less: "#{$screen} and (max-width: #{$laptop-end})";
+$xxl-less: "#{$screen} and (max-width: #{$laptop-wide-end})";
+
+$sm-only: "#{$screen} and (min-width: #{$mobile-wide-start}) and (max-width: #{$mobile-wide-end})";
+$md-only: "#{$screen} and (min-width: #{$tablet-start}) and (max-width: #{$tablet-end})";
+$lg-only: "#{$screen} and (min-width: #{$laptop-start}) and (max-width: #{$laptop-end})";
+$xl-only: "#{$screen} and (min-width: #{$laptop-wide-start}) and (max-width: #{$laptop-wide-end})";

@@ -1,0 +1,118 @@
+.front-about{
+  padding: 24px 0;
+  color: #222;
+  font-family: 'PT Sans Caption', sans-serif;
+  @media screen and (min-width: 768px) {
+    padding: 32px 0;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 48px 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 51px;
+    padding-top: 63px;
+  }
+  &-wrapper{
+    position: relative;
+  }
+  h2{
+    line-height: 1.2;
+    margin-bottom: 24px;
+    font-family: 'PT Serif Caption', sans-serif;
+    color: #2e2e2e;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 48px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 64px;
+    }
+  }
+  .about-facts{
+    font-size: 0;
+    line-height: 1;
+    @media screen and (min-width: 1024px) {
+      display: flex;
+    }
+    &--fact{
+      @media screen and (min-width: 1024px) {
+        flex: 1;
+      }
+      & + .about-facts--fact{
+        margin-top: 24px;
+        @media screen and (min-width: 1024px) {
+          margin-top: 0;
+          margin-left: 24px;
+        }
+        @media screen and (min-width: 1200px) {
+          margin-left: 32px;
+        }
+        @media screen and (min-width: 1400px) {
+          margin-left: 40px;
+        }
+      }
+    }
+    &--icon{
+      width: 80px;
+      margin-bottom: 8px;
+      @media screen and (min-width: 1200px) {
+        width: auto;
+        margin-bottom: 12px;
+        img{
+          height: 106px;
+          width: auto;
+        }
+      }
+    }
+    &--title{
+      font-size: 18px;
+      line-height: 1.2;
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
+      }
+      @media screen and (min-width: 1024px) {
+        font-size: 22px;
+      }
+      @media screen and (min-width: 1200px) {
+        font-size: 24px;
+      }
+    }
+    &--description{
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 1.45;
+      @media screen and (min-width: 768px) {
+        font-size: 16px;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-top: 12px;
+      }
+      @media screen and (min-width: 1400px) {
+        font-size: 18px;
+      }
+    }
+  }
+  .about-btn{
+    margin-top: 24px;
+    @media screen and (min-width: 1024px) {
+      margin: 0;
+      position: absolute;
+      right: 32px;
+      top: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      right: 48px;
+    }
+    .btn{
+      border-width: 2px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      @media screen and (min-width: 1024px) {
+        padding: 12px 18px;
+        border-width: 1px;
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.front-quotes{
+  padding: 24px 0;
+  @media screen and (min-width: 768px) {
+    padding: 32px 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 32px 0 48px 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 16px 0 48px 0;
+  }
+  .quotes{
+    font-family: 'PT Sans Caption', sans-serif;
+    @media screen and (min-width: 1024px) {
+      display: flex;
+    }
+    &--quote{
+      @media screen and (min-width: 1024px) {
+        flex: 1;
+        padding: 16px 0;
+      }
+      @media screen and (min-width: 1200px) {
+        padding: 20px 0;
+      }
+      @media screen and (min-width: 1400px) {
+        padding: 24px 0;
+      }
+      &__role{
+        color: #F5764E;
+        font-size: 11px;
+        line-height: 1.25;
+        text-transform: uppercase;
+        @media screen and (min-width: 1024px) {
+          font-size: 12px;
+        }
+        @media screen and (min-width: 1200px) {
+          font-size: 14px;
+        }
+        & + .quotes--quote__name{
+          margin-top: 4px;
+        }
+        & + .quotes--quote__text{
+          margin-top: 12px;
+        }
+      }
+      &__name{
+        font-size: 18px;
+        line-height: 1.25;
+        @media screen and (min-width: 1024px) {
+          font-size: 20px;
+        }
+        @media screen and (min-width: 1200px) {
+          font-size: 24px;
+        }
+        & + .quotes--quote__text{
+          margin-top: 12px;
+        }
+      }
+      &__text{
+        font-family: 'PT Serif', sans-serif;
+        opacity: 0.6;
+        font-size: 14px;
+        line-height: 1.6;
+        @media screen and (min-width: 1024px) {
+          font-size: 16px;
+        }
+        @media screen and (min-width: 1200px) {
+          font-size: 18px;
+        }
+      }
+      & + .quotes--quote{
+        margin-top: 24px;
+        border-top: 1px solid rgba(#fff, 0.6);
+        padding-top: 24px;
+        @media screen and (min-width: 1024px) {
+          margin-left: 65px;
+          border: none;
+          padding-top: 16px;
+          margin-top: 0;
+          position: relative;
+          &:before{
+            content: " ";
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            top: 0;
+            right: 100%;
+            margin-right: 32px;
+            background: rgba(#fff, 0.6);
+          }
+        }
+        @media screen and (min-width: 1200px) {
+          margin-left: 97px;
+          padding-top: 20px;
+          &:before{
+            margin-right: 48px;
+          }
+        }
+        @media screen and (min-width: 1400px) {
+          margin-left: 129px;
+          padding-top: 24px;
+          &:before{
+            margin-right: 64px;
+          }
+        }
+      }
+    }
+  }
+}

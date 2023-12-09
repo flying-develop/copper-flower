@@ -1,0 +1,107 @@
+.layout-part-header{
+	background: $light;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	line-height: 1;
+	@media #{$lg} {
+		background: transparent;
+		pointer-events: none;
+	}
+	.with-fancybox &{
+		width: auto;
+		right: 6px;
+		right: var(--fancybox-scrollbar-compensate);
+	}
+	#wpadminbar ~ &{
+		@media #{$lg} {
+			top: 32px;
+		}
+	}
+}
+.header-wrapper{
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: 48px;
+	@media #{$lg} {
+		height: 112px;
+	}
+	.logo{
+		flex: 0 0 101px;
+		line-height: 1;
+		font-size: 0;
+		@media #{$lg} {
+			flex: 0 0 64px;
+			pointer-events: auto;
+		}
+	}
+	a.logo{
+		transition: opacity 0.3s;
+		.no-touch &:hover{
+			opacity: 0.5;
+		}
+	}
+	.menu-btn{
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		margin-top: -10px;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		@media #{$sm} {
+			right: 24px;
+		}
+		@media #{$md} {
+			right: 32px;
+		}
+		@media #{$lg} {
+			display: none;
+		}
+		&:before{
+			content: " ";
+			display: block;
+			position: absolute;
+			left: -5px;
+			top: -5px;
+			right: -5px;
+			bottom: -5px;
+		}
+		.line{
+			height: 2px;
+			left: 0;
+			width: 100%;
+			background: $orange;
+			position: absolute;
+			display: block;
+			transition: transform 0.2s, top 0.2s 0.2s, background-color 0.3s;
+			&-one{
+				top: 3px;
+			}
+			&-two{
+				top: 9px;
+				transition: transform 0.2s, opacity 0.2s 0.2s, top 0.2s 0.2s, background-color 0.3s;
+			}
+			&-three{
+				top: 15px;
+			}
+			.menu-open &{
+				top: 9px;
+				transition: top 0.2s, transform 0.2s 0.2s, background-color 0.3s;
+				&-one{
+    			transform: rotate(-45deg);
+				}
+				&-two{
+					opacity: 0;
+    			transition: opacity 0.2s, top 0.2s, transform 0.2s 0.2s, background-color 0.3s;
+				}
+				&-three{
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+}

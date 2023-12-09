@@ -1,0 +1,109 @@
+.front-facts{
+  padding: 24px 0;
+  font-family: 'PT Sans Caption', sans-serif;
+  @media screen and (min-width: 768px) {
+    padding: 32px 0;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 48px 0 32px 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 64px 0 16px 0;
+  }
+  .facts{
+    @media screen and (min-width: 1024px) {
+      display: flex;
+    }
+    & + .picture{
+      margin-top: 40px;
+      @media screen and (min-width: 1024px) {
+        margin-top: 48px;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-top: 64px;
+      }
+    }
+    &--item{
+      @media screen and (min-width: 1024px) {
+        flex: 1;
+      }
+      & + .facts--item{
+        margin-top: 32px;
+        @media screen and (min-width: 1024px) {
+          margin-top: 0;
+          margin-left: 24px;
+        }
+        @media screen and (min-width: 1200px) {
+          margin-left: 48px;
+        }
+        @media screen and (min-width: 1400px) {
+          margin-left: 64px;
+        }
+      }
+      &__number{
+        font-size: 64px;
+        line-height: 1.2;
+        @media screen and (min-width: 1024px) {
+          font-size: 72px;
+        }
+        @media screen and (min-width: 1200px) {
+          font-size: 80px;
+        }
+        @media screen and (min-width: 1400px) {
+          font-size: 96px;
+        }
+      }
+      &__description{
+        font-size: 16px;
+        line-height: 1.25;
+        @media screen and (min-width: 1024px) {
+          font-size: 18px;
+          max-width: 250px;
+        }
+        @media screen and (min-width: 1200px) {
+          font-size: 20px;
+          max-width: 280px;
+        }
+        @media screen and (min-width: 1400px) {
+          font-size: 24px;
+          max-width: 320px;
+        }
+      }
+      &[data-index="0"] {
+        color: #F5764E
+      }
+    }
+  }
+  .picture{
+    font-size: 0;
+    line-height: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+      @media screen and (orientation: landscape) {
+        min-height: 480px;
+        height: 33.3vw;
+        object-position: center 10%;
+      }
+      @media screen and (orientation: portrait) {
+        height: 100vw;
+        min-height: 320px;
+        max-height: 480px;
+      }
+      &.mobile-img {
+        & + img {
+          display: none;
+        }
+        @media screen and (min-width: 1024px) {
+          display: none;
+          & + img {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
