@@ -19,12 +19,11 @@ function copperflower_assets() {
     wp_enqueue_style( 'app', $dir . $manifest['app.css'] ?? null, [], THEME_VERSION );
     wp_enqueue_script( 'app', $dir . $manifest['app.js'] ?? null, [], THEME_VERSION );
 
+
     if (is_front_page()) {
         wp_enqueue_style( 'front', $dir . $manifest['front.css'] ?? null, [], THEME_VERSION );
         wp_enqueue_script( 'front', $dir . $manifest['front.js'] ?? null, [], THEME_VERSION );
-    }
-
-    if (is_page()) {
+    } elseif (is_page()) {
         if (is_page_template('page-participant.php')) {
             wp_enqueue_style('become', $dir . $manifest['become.css'] ?? null, [], THEME_VERSION);
             wp_enqueue_script('become', $dir . $manifest['become.js'] ?? null, [], THEME_VERSION);
