@@ -558,19 +558,19 @@
       line-height: 1.45;
       font-family: 'PT Sans', sans-serif;
       opacity: 0.6;
-      display: -webkit-box;
+      /*display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
       text-overflow: ellipsis;
       overflow: hidden;
-      max-height: 61px;
+      max-height: 61px;*/
       @media screen and (min-width: 1024px) {
         font-size: 16px;
-        max-height: 70px;
+        //max-height: 70px;
       }
       @media screen and (min-width: 1200px) {
         font-size: 18px;
-        max-height: 79px;
+        //max-height: 79px;
       }
     }
     .movie-popup-trigger{

@@ -137,7 +137,7 @@
             <div class="movie-season">Сезон <?php echo get_the_title(); ?></div>
             <div class="movie-name"><?php echo $movie['title']; ?></div>
             <?php if ($movie['teaser']): ?>
-                <div class="movie-description"><?php echo $movie['teaser']; ?></div>
+                <div class="movie-description"><?php echo nl2br($movie['teaser']); ?></div>
             <?php endif; ?>
         </div>
     </div>
