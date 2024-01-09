@@ -95,6 +95,8 @@
     padding: 24px;
     border-radius: 10px;
     background: #fff;
+    display: flex;
+    align-items: center;
     @media screen and (min-width: 480px) {
       height: 32vw;
       display: flex;
@@ -113,7 +115,7 @@
       margin: 0 auto;
       display: block;
       max-width: 200px;
-      height: 90%;
+      height: 80%;
       /*media screen and (min-width: 480px) {
         height: 90%;
         max-width: 250px;
