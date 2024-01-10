@@ -19,11 +19,11 @@ while ( have_posts() ) {
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo-big-dark.png" alt="Медный цветок" width="192" height="217"/>
                 <span>Медный цветок</span>
             </a>
-            <a class="participants-way participants-way-partner participants-way-festagent" target="_blank" href="https://festagent.com/ru">
+            <a class="participants-way participants-way-partner participants-way-festagent" target="_blank" href="https://festagent.com/ru/festivals/copper-flower">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/festagent-logo.png" alt="Festagent" width="366" height="216"/>
                 <span>festagent.com</span>
             </a>
-            <a class="participants-way participants-way-partner participants-way-filmfreeway" target="_blank" href="https://filmfreeway.com/">
+            <a class="participants-way participants-way-partner participants-way-filmfreeway" target="_blank" href="https://filmfreeway.com/CFYFF">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/filmfreeway-logo.png" alt="FilmFreeway" width="522" height="216"/>
                 <span>filmfreeway.com</span>
             </a>
